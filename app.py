@@ -69,5 +69,5 @@ if prompt := st.chat_input("What You Love"):
 
                 # Add assistant response to chat history
                 st.session_state.messages.append({"role": "assistant", "content": ai_response})
-            except openai.error.OpenAIError as e:
+            except openai.OpenAIError as e: # 'error.' 를 제거합니다.
                 st.error(f"OpenAI API Error: {e}")
