@@ -12,7 +12,12 @@ st.markdown("---")
 # on your deployment service (like Streamlit Community Cloud).
 # Example: api_key = os.getenv("OPENAI_API_KEY")
 api_key = st.secrets["OPENAI_API_KEY"]
-openai.api_key = api_key
+
+# --- 변경된 부분 시작 ---
+# API 키를 openai 클라이언트 객체에 직접 전달하는 방식으로 변경
+client = openai.OpenAI(api_key=api_key)
+# openai.api_key = api_key # 이 코드는 더 이상 필요하지 않습니다.
+# --- 변경된 부분 끝 ---
 
 # The JavaScript `const initialMessages = [...]` part
 initial_messages = [
@@ -53,8 +58,9 @@ if prompt := st.chat_input("What You Love"):
     with st.chat_message("assistant"):
         with st.spinner("Nevertheless is thinking..."):
             try:
-                # The JavaScript `fetchAIResponse` part
-                response = openai.ChatCompletion.create(
+                # --- 변경된 부분 시작 ---
+                # openai.ChatCompletion.create()를 client.chat.completions.create()로 변경
+                response = client.chat.completions.create(
                     model="gpt-3.5-turbo",
                     messages=[{"role": m["role"], "content": m["content"]} for m in st.session_state.messages],
                     temperature=0.8,
@@ -69,5 +75,5 @@ if prompt := st.chat_input("What You Love"):
 
                 # Add assistant response to chat history
                 st.session_state.messages.append({"role": "assistant", "content": ai_response})
-            except openai.OpenAIError as e: # 'error.' 를 제거합니다.
+            except openai.OpenAIError as e:
                 st.error(f"OpenAI API Error: {e}")
