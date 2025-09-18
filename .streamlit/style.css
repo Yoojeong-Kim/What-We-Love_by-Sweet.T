@@ -1,7 +1,7 @@
 body {
     background-color: #000000;
     background-image: url("https://github.com/Yoojeong-Kim/What-We-Love_by-Sweet.T/blob/main/Background%20Image.JPG?raw=true");
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
