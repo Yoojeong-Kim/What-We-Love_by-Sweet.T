@@ -10,8 +10,8 @@ def local_css(file_name):
 local_css(".streamlit/style.css")
 
 # Set a title for the Streamlit app
-st.title("Nevertheless Chatbot")
-st.markdown("---")
+# st.title("Nevertheless Chatbot")
+# st.markdown("---")
 
 # The JavaScript `const apiKey = '...';` part
 # We use st.secrets for secure key management, or environment variables
