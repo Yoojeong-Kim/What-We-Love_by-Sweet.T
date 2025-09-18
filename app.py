@@ -2,6 +2,13 @@ import streamlit as st
 import openai
 import os
 
+# add style
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
+local_css(".streamlit/style.css")
+
 # Set a title for the Streamlit app
 st.title("Nevertheless Chatbot")
 st.markdown("---")
