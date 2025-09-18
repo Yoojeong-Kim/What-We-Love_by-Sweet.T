@@ -4,8 +4,11 @@ import os
 
 # add style
 def local_css(file_name):
-    with open(file_name) as f:
-        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+    # 파일 경로를 더 안정적으로 탐색합니다.
+    p = Path(file_name)
+    if p.exists():
+        with p.open() as f:
+            st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 local_css(".streamlit/style.css")
 
