@@ -1,5 +1,5 @@
-/*
-body {
+
+.stApp {
     background-color: #FFC0CB;
     background-image: url("https://raw.githubusercontent.com/Yoojeong-Kim/What-We-Love_by-Sweet.T/main/Background_Image.JPG?v=1");
     background-size: contain;
@@ -7,43 +7,3 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-
-/* style.css */
-/* 웹페이지 전체 배경을 검정으로 설정 */
-body {
-    background-color: #000000;
-}
-
-/* 챗봇 컨테이너와 주요 앱 영역의 배경을 검정으로 설정 */
-[data-testid="stAppViewContainer"] {
-    background-color: #000000;
-}
-[data-testid="stHeader"] {
-    background-color: rgba(0,0,0,0);
-}
-[data-testid="stToolbar"] {
-    background-color: rgba(0,0,0,0);
-}
-
-/* 채팅창 메시지 배경을 검정으로 설정 */
-.st-emotion-cache-1j0r96u {
-    background-color: #000000;
-}
-.st-emotion-cache-4oy5x3 {
-    background-color: #000000;
-}
-
-/* 사이드바가 있다면 사이드바의 배경색도 검정으로 설정 */
-.st-emotion-cache-1l00l9j {
-    background-color: #000000;
-}
-
-/* 배경 이미지도 추가하고 싶다면 이 부분을 사용하세요 */
-body {
-    background-image: url("https://raw.githubusercontent.com/Yoojeong-Kim/What-We-Love_by-Sweet.T/main/Background_Image.JPG?v=1");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-*/
