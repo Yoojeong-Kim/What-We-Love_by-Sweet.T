@@ -1,8 +1,8 @@
 
 .stApp {
-    background-color: #FFC0CB;
+    background-color: #000000;
     background-image: url("https://raw.githubusercontent.com/Yoojeong-Kim/What-We-Love_by-Sweet.T/main/Background_Image.JPG?v=1");
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
